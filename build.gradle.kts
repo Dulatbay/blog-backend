@@ -26,11 +26,16 @@ extra["springCloudVersion"] = "2022.0.4"
 dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
+    implementation("org.postgresql:postgresql")
+//	implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-jdbc")
+
     compileOnly("org.projectlombok:lombok")
-    runtimeOnly("org.postgresql:postgresql")
     annotationProcessor("org.projectlombok:lombok")
 
-    implementation(project(mapOf("path" to ":client-libs:keycloak")))
+//    implementation(project(mapOf("path" to ":client-libs:keycloak")))
+
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
