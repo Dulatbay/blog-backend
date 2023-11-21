@@ -20,6 +20,7 @@ public class Blog {
     @Column(name = "description")
     private String description;
 
+
     @Column(name = "has_collab")
     private boolean isPremium;
 
